@@ -3,15 +3,29 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>Home</title>
 </h:head>
 <h:body>
 
     <h1>Hola a todos desde un EAR con Jakarta Server Faces</h1>
     <p>
-        <h:outputText value="Usando un primer TAG" />
+        <h:outputText value="Usando un primer TAG"/>
     </p>
+    <h4>Ejemplos:</h4>
+    <ul>
+        <li>
+            <h:link value="Expression Language" outcome="/basic/exp_lang"/>
+        </li>
+        <li>
+            <h:link value="Hola mundo" outcome="basic/hola_mundo">
+                <f:param name="nombre" value="Erick" />
+            </h:link>
+        </li>
+        <li>
+            <h:link value="Gestor libros" outcome="/basic/libros" />
+        </li>
+    </ul>
 
 </h:body>
 </html>

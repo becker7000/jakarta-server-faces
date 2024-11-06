@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <meta charset="UTF-8" />
+    <title>Hola mundo</title>
+</h:head>
+<h:body>
+
+    <h2>
+        <h:outputText value="Hola mundo redirigido ${4*2}"/>
+    </h2>
+
+    <!-- Usando una expresión de evaluación diferida -->
+    <h:outputText value="#{holaMundoController.mensaje}" />
+
+    <f:metadata>
+        <f:viewAction action="#{holaMundoController.crearSaludo}" />
+    </f:metadata>
+
+    <br/>
+    <h:outputText value="#{holaMundoController.saludo}" />
+
+
+</h:body>
+</html>

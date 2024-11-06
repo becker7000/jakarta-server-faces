@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <meta charset="UTF-8"/>
+    <title>Expression Language</title>
+</h:head>
+<h:body>
+
+    <h3>
+        <h:outputText value="Ejemplos de Expression Language (inmediatos)"/>
+    </h3>
+
+    <br/>
+    <p><strong>Aritmeticos</strong></p>
+    <p>Suma: ${10+5}</p>
+    <p>Resta: ${10-5}</p>
+    <p>Multiplicación: ${10*5}</p>
+    <p>División: ${10/5} o también ${10 div 5}</p>
+    <p>Resto: ${10%3} o también ${10 mod 3}</p>
+
+    <br/>
+    <p><strong>Relacionales</strong></p>
+    <p>Igual que: ${4==4}</p>
+    <p>Diferente de: ${10!=3}</p>
+    <p>Mayor que: ${10>4}</p>
+    <p>Menor que: ${2 lt 4}</p>
+    <p>Igual que: ${2 eq 4}</p>
+    <p>Menor o igual que: ${4 le 10}</p>
+    <p>Mayor o igual que: ${2 >= 4}</p>
+
+    <br/>
+    <p><strong>Lógicos</strong></p>
+    <p>${ (6 > 2) || (4 != 0) }</p>
+    <p>${ (3 == 3) and (3 gt 8)}</p>
+    <p>${not (5 lt 1)}</p>
+    <p>${empty []}</p> <!-- not empty -->
+
+    <br/>
+    <p><strong>Cadenas</strong></p>
+    <p>${"Hola " += "Mundo"}</p>
+
+    <!-- Las EL no se pueden anidar -->
+
+</h:body>
+</html>
