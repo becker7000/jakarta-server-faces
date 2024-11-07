@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <meta charset="UTF-8"/>
+    <title>Calculadora básica</title>
+</h:head>
+<h:body>
+
+    <h2>Calculadora básica</h2>
+    <p>Permite hacer las operaciones: suma, resta, multiplicación y división</p>
+
+    <br/>
+
+    <!-- Primero probar con este código: -->
+    <!--
+        <h:inputText id="oper" value="#{calculadoraController.operacion}"/>
+    -->
+
+    <!-- colocar al final -->
+    <h:messages errorStyle="color:red" infoStyle="color:blue" globalOnly="true" />
+
+    <h:form id="formCalculadora">
+
+        <h:panelGrid columns="2">
+
+            <h:outputLabel for="x" value="Número 1: "/>
+            <h:inputText id="x" value="#{calculadoraController.x}"/>
+
+            <h:outputLabel for="y" value="Número 2: "/>
+            <h:inputText id="y" value="#{calculadoraController.y}"/>
+
+            <h:outputLabel for="oper" value="Operación: "/>
+
+            <h:selectOneMenu id="oper" value="#{calculadoraController.operacion}">
+                <!--
+                <f:selectItem itemValue="Suma" itemLabel="Suma" />
+                <f:selectItem itemValue="Resta" itemLabel="Resta" />
+                <f:selectItem itemValue="Mutiplica" itemLabel="Multiplicación" />
+                <f:selectItem itemValue="Divide" itemLabel="División" />
+                -->
+                <f:selectItems value="#{calculadoraController.listaOperaciones}" />
+            </h:selectOneMenu>
+
+            <h:outputLabel for="resultado" value="Resultado: "/>
+            <h:outputText id="resultado" value="#{calculadoraController.resultado}"/>
+
+            <h:commandButton value="Calcular resultado" action="#{calculadoraController.calcularResultado}"/>
+
+        </h:panelGrid>
+    </h:form>
+
+    <br/>
+    <h:link outcome="/index" value="Volver al inicio"/>
+
+</h:body>
+</html>

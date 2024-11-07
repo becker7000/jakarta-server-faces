@@ -7,5 +7,12 @@
               version="2.3">
 
     <!-- También lo dejamos vacío por lo mientras -->
+    <navigation-rule>
+        <from-view-id>/basic/automovil_form.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>EXITO</from-outcome>
+            <to-view-id>/basic/salidas/salida_exito.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 
 </faces-config>

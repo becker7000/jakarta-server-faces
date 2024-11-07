@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xml:lang="en" lang="en">
+<h:head>
+    <title>Echo AJAX</title>
+</h:head>
+<h:body>
+
+    <h2>Echo AJAX</h2>
+
+    <h:form id="formEcho">
+
+
+        <h:outputLabel for="echo_entrada" value="Escribe algo: " />
+        <h:inputText id="echo_entrada" value="#{echoController.texto}">
+            <f:ajax event="keyup" render="echo_salida" />
+        </h:inputText>
+        <br/>
+        <h:outputText id="echo_salida" value="#{echoController.texto}" />
+
+        <br/>
+        <h:commandButton value="Enviar" action="#{echoController.envio}" />
+
+    </h:form>
+
+    <br/>
+    <h:link outcome="/index" value="Ir al inicio"/>
+
+</h:body>
+</html>
+
+<!--
+    Eventos AJAX:
+        blur,change,click,dbclick,focus,keydown,keypress,keyup
+        mousedown,mousemove,mouseout,mouseover,mouseup,select
+-->
